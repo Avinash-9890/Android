@@ -13,12 +13,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     Button login;
     Button signup;
 
-    @SuppressLint("MissingInflatedId")
+
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
      login = findViewById(R.id.btnLogin);
      signup = findViewById(R.id.btnRegister);
+
 
      login.setOnClickListener(new View.OnClickListener() {
          @Override
@@ -51,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
 
 
 
